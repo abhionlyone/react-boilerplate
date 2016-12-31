@@ -10,7 +10,7 @@
   <!-- Required JS for React -->
   <script src="https://unpkg.com/react@15/dist/react.js"></script>
   <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/6to5/3.6.5/browser.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
 
@@ -35,13 +35,10 @@
     </div>
   </nav>
 
-  <div class="container">
-    <!-- <h3>Navbar With Dropdown</h3>
-    <p>Content goes here..</p> -->
-  </div>
+  <div id="container"></div>
 
   <script type="text/babel">
-    ReactDOM.render(<h1>Hi, this is Abhi</h1>,getElementById(container));
+    ReactDOM.render(<h1>Hi, this is Abhi</h1>,document.getElementById('container'));
   </script>
 </body>
 </html>
