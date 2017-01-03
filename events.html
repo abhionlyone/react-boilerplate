@@ -38,7 +38,35 @@
   <div id="container"></div>
 
   <script type="text/babel">
-    ReactDOM.render(<h1>Hi, this is Abhi</h1>,document.getElementById('container'));
+	class EventEx extends React.Component{
+	    edit(){
+	      alert('editing comment');
+	    };
+	    delete(){
+	      alert('deleting comment');
+	    };
+      render (){
+        return(
+            <div className='container'>
+                <h1>{this.props.children}</h1>
+                <button onClick={this.edit} type="button" className="btn btn-warning">Edit</button>
+                <button onClick={this.delete} type="button" className="btn btn-danger">Delete</button>
+            </div>
+        )
+      }
+    }
+    ReactDOM.render(
+        <div>
+          <EventEx>Hi,This is Abhi</EventEx>
+          <EventEx>This is my second comment</EventEx>
+        </div>,    
+        document.getElementById('container')
+    );
   </script>
+  <style type="text/css">
+    .btn {
+    margin-right: 5px;
+    }
+  </style>
 </body>
 </html>
